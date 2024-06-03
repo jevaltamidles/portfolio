@@ -129,7 +129,7 @@ header:before{
 .page_nav ul{}
 .page_nav ul li{display:inline-block;vertical-align: top; position:relative;}
 .page_nav ul li a{display:block; font-size: 20px; font-weight: normal; color:#fff; text-transform: uppercase; line-height: 58px; padding:0 15px;font-family: "Outfit", sans-serif;}
-.page_nav ul li a:hover, .page_nav ul li a:active, .page_nav ul li.current_page_item > a, .page_nav ul li a:hover small, .page_nav ul li.current_page_item a small{text-decoration: underline;}
+.page_nav ul li a:hover, .page_nav ul li a:active, .page_nav ul li.current_page_item > a, .page_nav ul li a:hover small, .page_nav ul li.current_page_item a small{color: rgb(183, 197, 255);}
 .page_nav ul li:after{content:"";width:1px;height:22px;background:#000; position:absolute; top:18px; right:-4px;display: none;}
 .page_nav ul li:last-child:after{display:none;}
 
@@ -417,7 +417,7 @@ footer{background: #00002B;}
 
 		.footer_logo{position: absolute;bottom: 60px;}
 		.footer_logo a{color: #fff;font-family: "Outfit", sans-serif;font-weight: bold;font-size: 20px;text-transform: uppercase;}
-
+.footer_logo a:hover{color:rgb(183, 197, 255); text-decoration: underline;}
 	.footer_btm{background:#00002B;}
 		.footer_btm_con{min-height:0;padding:0 0 40px;}
 
@@ -425,7 +425,7 @@ footer{background: #00002B;}
 		.footer_nav ul{ margin: auto 0; padding: 0; text-align: right; list-style: none; }
 		.footer_nav ul li{display: inline-block; vertical-align: top;position:relative;}
 		.footer_nav ul li a{  display: block;font-size: 20px;font-weight: normal;color: #fff;text-transform: uppercase;line-height: 58px;padding: 0 15px;font-family: "Outfit", sans-serif;}
-		.footer_nav ul li a:hover, .footer_nav ul li a:active, .footer_nav ul li.current_page_item a{text-decoration:underline;}
+		.footer_nav ul li a:hover, .footer_nav ul li a:active, .footer_nav ul li.current_page_item a{color:rgb(183, 197, 255);}
 		.footer_nav ul li:after{content:"";width:1px;height:21px;top:0;right:-3px;background:#fff;position:absolute;display: none;}
 		.footer_nav ul li:last-child:after{display:none;}
 
