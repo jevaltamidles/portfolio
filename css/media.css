@@ -45,15 +45,20 @@ and (max-width : 1010px) {
 
     .bnr_info{width:100%;position:static;padding:40px 25px;text-align: center;}
   .bnr_info ul{margin: 0 auto;text-align: center;justify-content: center;}
+  #popup__about .popup{height: auto;}
+  .popup__about-jeval-txt{text-align: left;}
+  .popup__about-jeval-img{width: 36%;}
+  .popup__about-jeval-img figure{margin: 0;max-width: 100%;}
     .bnr_info a{display:inline-block;}
 
     .non_ban figure{width: 170%;}
         .non_ban_img{width: 170%;margin-left: -37%;height: auto;}
 .non_ban_img img{position: static;transform: none;max-width: 100%;}
   /*Middle Area*/
-  #middle{padding:40px 25px;}
-	 .middle_con{min-height:0;padding:0;}
-	 [class^="mid_box"]{width:48%;margin:0 auto 15px;height:auto;padding:30px 10px; text-align:center;}
+  #middle{}
+	 .middle_con{min-height:0;padding:55px 0 0;}
+	 [class^="mid_box"]{width:48%;margin:0 auto 15px;height:auto;padding:30px 0; }
+  [class^="mid_box"]::after {top: 34px;width: 94%;}
   [class^="mid_box"] ul li{font-size: 1.2em;}
 
   /*Main Area*/
@@ -61,25 +66,28 @@ and (max-width : 1010px) {
     .main_con{min-height:0;padding:0;max-width: 100%;}
       main, .sidebar{float:none; margin: auto; width:100%;}
 
-      main{text-align: center;margin-bottom: 40px;}
+      main{text-align: left;margin-bottom: 40px;}
         main .h1_title{}
         main .h1_title span{}
       .sidebar{}
   .sideboxes{max-width: 398px;width: 100%;}
   [class^="side_box"]{max-width: 120px;height: 120px;}
   [class^="side_box"] figure{max-width: 74px;}
-
+  #popup__skills .popup{}
+  #popup__skills .sideboxes{max-width: 100%;}
   /*Bottom Area*/
   #bottom1{padding:40px 25px;}
 	 .btm1_con{min-height:0;padding:0;}
-   .btm1boxes{}
-	 [class^="btm1_box"]{width:32%;margin:0 0 15px;height:auto;padding:30px 8px; text-align:center;}
+   .btm1boxes{flex-wrap: wrap;}
+	 [class^="btm1_box"]{width:48%;margin:0 auto 15px;height:auto;padding:30px 8px; text-align:center;max-width: 100%;}
+  [class^="btm1_box"]:last-child{margin-top: 60px;}
   [class^="btm1_box"] h2{font-size: 23px;}
 
   #bottom2{padding:40px 25px;min-height: 300px;}
-	 .btm2_con{padding: 70px 15px 0;}
+	 .btm2_con{padding: 70px 0 50px;}
 	  .btm2_left_con{}
   [class^="btm2_box"] {width:48%;margin:0 auto 15px;height:auto;padding:30px 10px; text-align:center;}
+ 
 	   .btm2_right_con{}
 
 #bottom3{padding:40px 25px;}
@@ -122,7 +130,7 @@ and (max-width : 800px) {
 	.header_info{display:block;margin:0 auto;text-align:center;padding:0;float:none;}
 
   /* Nav Area*/
-  #nav_area{padding:25px 15px;background:#00002B;position:relative;}
+  #nav_area{padding:25px 15px;background:#00002B;position:relative;z-index: 9;}
   .nav_toggle_button{display:block;position:relative;}
 
   nav.page_nav {width: 280px;position: fixed;top: 0;right: -280px;height: 100%;background: #00002B;transition: all 0.7s ease;overflow-y: scroll;padding: 0 0 30px;opacity: 0;float: none; clear: both;z-index:250;}
@@ -137,7 +145,7 @@ and (max-width : 800px) {
   .toggle_right_nav {position: fixed;top: 0;left: 0;right: 0;width:100%;height: 100%;z-index: 1000;visibility: hidden; transition: all 0.7s ease;}
   .toggle_nav_close {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;}
   .toggle_right_cont {visibility: visible;background: rgba(0,0,0,0.9);}
-  nav.toggle_right_style {right: 0;opacity: 1;z-index: 45;}
+  nav.toggle_right_style {right: 0;opacity: 1;z-index: 999;}
   .logo_slide_right {display:block;float:left;width: calc(100% - 90px);color: #fff;font-family: "Outfit", sans-serif;font-weight: bold;font-size: 20px;text-transform: uppercase;padding-left: 9px;}
 
   .menu_slide_right {display: block;text-align: left;padding: 20px 10px;background: #00002B;position: relative;}
@@ -146,13 +154,19 @@ and (max-width : 800px) {
 
   /*Middle Area*/
   .middle_boxes section{width: 47%;margin:5px;}
-  .midboxes{display: block;}
-  [class^="mid_box"]{width: 100%;text-align: center;padding: 0 0 30px;max-width: 100%;}
+  .midboxes{display: block;padding-bottom: 70px;}
+  [class^="mid_box"]{width: 100%;padding: 0 50px 30px;max-width: 100%;}
+  [class^="mid_box"]::before {left: 30px;position: absolute;top: 0;}
+  [class^="mid_box"]::after {height: 100%;width: 1px;border-radius: 0;top: 12px;left: 35px;}
   [class^="mid_box"] ul{justify-content: center;}
   /*Main Area*/
+  #main_area{padding: 0 25px 90px;}
   .main_con{display: block;text-align: center;}
-  .sideboxes{max-width: 100%;width: 100%;}
-  [class^="side_box"]{max-width: 99px;height: 99px;}
+  main {
+	text-align: center;
+}
+  .sideboxes{max-width: 100%;width: 100%;justify-content: center;}
+  [class^="side_box"]{max-width: 99px;height: 99px;margin: 0 19px 18px;}
   [class^="side_box"] figure{max-width: 59px;}
   /*Bottom Area*/
   .btm1_con{}
@@ -160,10 +174,11 @@ and (max-width : 800px) {
   .btm1_area h2 span{width: 100%;max-width: 100%;}
   .btm1_boxes section{width: 47%;margin:5px;}
   .btm1boxes{flex-wrap: wrap;justify-content: space-between;}
-  [class^="btm1_box"]{width: 46%;margin: 0 0 70px;}
-  [class^="btm1_box"]:last-of-type{margin: 0 auto;}
-  .btm2_con{padding: 70px 15px 20px;min-height: 0;}
-  [class^="btm2_box"]{}
+  [class^="btm1_box"]{width: 48%;margin: 0 0 70px;}
+  [class^="btm1_box"]:last-of-type{margin: 25px auto 10px;}
+  .btm2_con{padding: 70px 15px 50px;min-height: 0;}
+  .btm2boxes{flex-wrap: wrap;}
+  [class^="btm2_box"]{padding: 0;}
   .btm2_area h2 span{max-width: 100%;}
   /*Footer Area*/
   
@@ -200,11 +215,13 @@ and (max-width : 600px) {
   /*Bottom Area*/
   .btm1_area h2 span{/*! font-size: 35px; */}
   .btm1boxes{display:block;}
-  [class^="btm1_box"]{width:100%;display:block;width: 100%;margin:5px auto;}
+  [class^="btm1_box"]{width:100%;display:block;width: 100%;margin:75px auto 0;}
+  [class^="btm1_box"]:last-of-type{margin: 75px auto 10px;}
   .btm2_area h2 span{font-size: 35px;}
   .btm2boxes{display: block;}
   .btm3_area h2 span{font-size: 35px;}
   [class^="btm2_box"]{width:100%;display:block;width: 100%;margin:5px auto;}
+  
   .btm3_form form input[type="text"], .btm3_form form input[type="email"]{width:100%;margin:0 auto 15px;}
   .btm3_form form textarea{margin:0 auto 15px;}
 
@@ -212,7 +229,7 @@ and (max-width : 600px) {
   footer {padding-bottom: 45px;}
 
   .footer_nav ul li{vertical-align:top;}
-	.footer_nav ul li a{margin:5px auto;}
+	.footer_nav ul li a{margin:5px auto;padding: 0 5px;font-size: 18px;}
 
 
 
@@ -231,15 +248,21 @@ and (max-width : 600px) {
 
 @media only screen
 and (max-width : 500px) {
+  .bnr_con figure{max-width: 349px;}
   .bnr_info h2{font-size: 56px;}
   .bnr_info h2 span{font-size: 36px;}
-  .bnr_info ul li{margin: 0 auto;max-width: 100%;}
-  .bnr_info ul li a{max-width: 175px;width: 100%;line-height: 45px;font-size: 18px;}
+  .bnr_info ul{flex-wrap: wrap;}
+  .bnr_info ul li{margin: 0 auto 15px;max-width: 100%;}
+  .bnr_info ul li a{max-width: 195px;width: 100%;line-height: 45px;font-size: 0.8em;}
+  .popup__about-jeval-txt{margin: 40px 21px 40px 38%;}
   [class^="side_box"]{max-width: 65px;height: 65px;}
   [class^="side_box"] figure{max-width: 40px;}
+  #popup__skills [class^="side_box"]{height: 75px;max-width: 75px;}
+  #popup__skills [class^="side_box"] figure{max-width: 43px;}
   main .h1_title{font-size: 62px;}
   main a{max-width: 175px;width: 100%;line-height: 45px;font-size: 18px;}
   [class^="btm1_box"]{max-width: 100%;margin: 0 auto 70px;}
   [class^="btm1_box"] h2{min-height: auto;}
+  
 }
 

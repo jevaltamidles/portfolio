@@ -1,341 +1,505 @@
 <!--?php @session_start();
-get_includes('head');
-get_includes('header');
-get_includes('nav');
-get_includes('banner');
-?-->
+  get_includes('head');
+  get_includes('header');
+  get_includes('nav');
+  get_includes('banner');
+  ?-->
 <!--?php if ( is_front_page() ) { get_includes('middle'); }?-->
-
 <!DOCTYPE html>
-<!--[if lt IE 10]> <html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 10]> <html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 11]> <html class="no-js lt-ie11"> <![endif]-->
-<!--[if gt IE 11]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-
-	<title>Jeval Tamidles</title>
-
-
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="css/hamburgers.min.css">
-	<link rel="stylesheet" href="css/media.css">
-	<link rel="stylesheet" href="css/rslides.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<!-- <link rel="stylesheet" href="css/animate.min.css">-->
-	<!-- <link rel="stylesheet" href="css/skitter.styles.min.css"> -->
-	<!--?php wp_head(); ?-->
-</head>
-	<body>
-		<div class="protect-me">
-		<div class="clearfix">
-
-<!-- Header -->
-  <header>
-    <div class="wrapper">
-			<div class="header_con">
-        <div class="main_logo">
-          <a href="<?php //echo get_home_url(); ?>">Jeval</a>
-        </div>
-			</div>
-      <div class="clearfix"></div>
-    </div>
-  </header>
-<!-- End Header -->
-
-<!-- Navigation -->
-	<div id="nav_area">
-    <div class="nav_toggle_button">
-			<div class="logo_wrap"></div>
-			<div class="toggle_holder">
-				<div class="hamburger hamburger--spin-r">
-				  <div class="hamburger-box">
-					<div class="hamburger-inner"></div>
-				  </div>
-				</div>
-				<small>Menu</small>
-			</div>
-			<div class="clearfix"></div>
-	  </div>
-
-		<div class="toggle_right_nav">
-		  <nav class="page_nav">
-				<div class="menu_slide_right">
-					<a href="<?php //echo get_home_url(); ?>" class="logo_slide_right">Jeval</a>
-					<div class="toggle_holder">
-						<div class="hamburger hamburger--spin-r">
-						  <div class="hamburger-box">
-							<div class="hamburger-inner"></div>
-						  </div>
-						</div>
-						<small>Close</small>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-
-				<div class="wrapper">
-					<!--?php wp_nav_menu( array( 'container_class' => 'nav-menu', 'theme_location' => 'primary', 'after' => '<span><i class="fa fa-2x">&nbsp;&nbsp;&nbsp;&nbsp;</i></span>') ); ?-->
-					<ul>
-						<!-- <li class="current_page_item"><a href="">Home</a></li> -->
-						<li><a href="#banner">About</a></li>
-						<li><a href="#careers">Career</a></li>
-						<li><a href="#projects">Project</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</div>
-		  </nav>
-			<div class="toggle_nav_close"></div>
-		</div>
-	</div>
-<!-- End Navigation -->
-
-<!-- Banner -->
-	<div id="banner">
-		<div class="wrapper">
-			<div class="bnr_con">
-					<!-- <--?php if (is_front_page() ) { ?> -->
-				<figure><img src="images/web-development.png" alt="Web Development"/></figure>
-
-				<div class="mobi_ban">
-					<figure><img src="images/web-development.png" alt="Web Development"></figure>
-				</div>
-
-				<div class="bnr_info">
-						<!--?php dynamic_sidebar('bnr_info');?-->
-					<h2>Jeval Tamidles <span>Front End Developer</span></h2>
-					<p>
-						I am a qualified and professional web developer with a total of 5 years working experience in designing, developing, and configuring websites to meet business process and application requirements. With Strong creative and analytical skills. Team player with an eye for detail.
-					</p>
-					<ul>
-						<li><a href="">Click More</a></li>
-						<li><a href="">Click More</a></li>
-					</ul>
-				</div>
-				<!-- <--?php } else { ?>
-				<div class="non_ban">
-				<div class="non_ban_img">
-				<php if(is_home() && is_author() && is_category() && is_tag() && is_single()) { ?>
-				<php if (has_post_thumbnail() ) {?>
-						<php the_post_thumbnail('full');?>
-				<php }else{ ?>
-						<figure><img src="<php bloginfo('template_url');?>/images/slider/nh-banner.jpg" alt="image" /></figure>
-				<php } ?>
-				<php } elseif (has_post_thumbnail() ) { ?>
-							<php the_post_thumbnail('full');?>
-				<php } else { ?>
-					<img src="<php bloginfo('template_url'); ?>/images/slider/nh-banner.jpg" alt="image">
-				<php } ?>
-				</div>
-
-				<div class="page_title">
-				<php if(!is_home() && !is_author() && !is_category() && !is_tag() && !is_single()) { ?>
-					<h1 class="h1_title"><php the_title(); ?></h1>
-					<php echo do_shortcode("[short_title id='" . get_the_ID() . "']"); ?>
-				<php } else { ?>
-					<h1 class="h1_title">Blog</h1>
-				<php } ?>
-				</div>
-				</div>
-				<php }?> -->
-
-
-			</div>
-		</div>
-	</div>
-<!-- End Banner -->
-
-<!-- Middle -->
-	<div id="careers"></div>
-	<div id="middle">
-		<div class="wrapper">
-			<div class="middle_con">
-				<div class="mid_area">
-					<!--?php dynamic_sidebar('header_info');?-->
-					<h2>WORK EXPERIENCE <span>Who I Work With</span></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. </p>
-				</div>
-				<div class="midboxes">
-
-					<div class="mid_box1">
-								<!--?php dynamic_sidebar('bnr_info');?-->
-						<figure><img src="images/proweaver.png" alt="proweaver"/></figure>
-						<ul>
-							<li>Custom Web Design/Pages</li>
-							<li>Newsletter</li>
-							<li>Blogs</li>
-							<li>Page Maintenance</li>
-						</ul>
-					</div>
-
-					<div class="mid_box2">
-								<!--?php dynamic_sidebar('bnr_info');?-->
-						<figure><img src="images/dtw-logo.png" alt="Datawords"/></figure>
-						<figure><img src="images/clarins.png" alt="Clarins"/></figure>
-						<ul>
-							<li>Landing Pages</li>
-							<li>Product Display Pages</li>
-							<li>Content Slots</li>
-							<li>E-store</li>
-							<li>Page Designer Updates</li>
-						</ul>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-<!-- End Middle -->
-
-<!-- Main -->
-	<div id="main_area">
-  	<div class="wrapper">
-			<div class="main_con">
-				<main>
-					<!-- <php if(!is_front_page()) : ?>
-					<div class="breadcrumbs">
-						<php
-							if(function_exists('bcn_display'))
-							{
-									bcn_display();
-							}?>
-					</div>
-					<php endif; ?> -->
-					<h1 class="h1_title">Tools Used</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
-					<a href="">Click More</a>
-				</main>
-						<!--?php if ( is_front_page() ) { get_includes('sidebar'); } ?-->
-	      <aside class="sidebar">
-					<div class="sideboxes">
-	       		<div class="side_box1">
-	       			<figure><img src="images/html.png" alt="HTML"/></figure>
-	       		</div>
-	       		<div class="side_box2">
-	       			<figure><img src="images/css-3.png" alt="CSS 3"/></figure>
-	       		</div>
-	       		<div class="side_box3">
-	       			<figure><img src="images/wordpress.png" alt="Wordpress"/></figure>
-	       		</div>
-	       		<div class="side_box4">
-	       			<figure><img src="images/php.png" alt="PHP"/></figure>
-	       		</div>
-	       		<div class="side_box5">
-	       			<figure><img src="images/salesforce.png" alt="SFCC"/></figure>
-	       		</div>
-	       		<div class="side_box6">
-	       			<figure><img src="images/java-script.png" alt="Javscript"/></figure>
-	       		</div>
-					</div>
-	      </aside>
-			</div>
-
-			<div class="clearfix"></div>
-  	</div>
-	</div>
-<!-- End Main -->
-	<!--?php if ( is_front_page() ) { get_includes('bottom'); } ?-->
-<!-- Bottom -->
-<div id="projects"></div>
-  <div id="bottom1">
-    <div class="wrapper">
-      <div class="btm1_con">
-				<div class="btm1_area">
-					<!--?php dynamic_sidebar('header_info');?-->
-					<h2>Testimonials <span>Read What Others Have To Say</span></h2>
-				</div>
-				<div class="btm1boxes">
-					<div class="btm1_box1">
-						<figure><img src="images/woman.png" alt="Nina Anjerrie Baraquil"/></figure>
-						<h2>Nina Anjerrie Baraquil</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-
-					<div class="btm1_box2">
-						<figure><img src="images/man.png" alt="Jan Francis Jadloc"/></figure>
-						<h2>Jan Francis Jadloc</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-
-					<div class="btm1_box3">
-						<figure><img src="images/woman.png" alt="Melody Abigail Cuenco"/></figure>
-						<h2>Melody Abigail Cuenco</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-
-				</div>
-      </div>
-    </div>
-  </div>
-  <div id="contact"></div>
-	<div id="bottom2">
-		<div class="wrapper">
-			<div class="btm2_con">
-				<div class="btm2_area">
-					<!--?php dynamic_sidebar('header_info');?-->
-					<h2>Get in touch <span>Contact Details</span></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. </p>
-				</div>
-				<div class="btm2boxes">
-					<div class="btm2_box1">
-						<mark>+639957596081</mark>
-					</div>
-					<div class="btm2_box2">
-						<a href="mailto:jevaltamidles@gmail.com">jevaltamidles@gmail.com</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<!-- End Bottom -->
-
-<!--Footer -->
-	<footer>
-
-    <div class="footer_btm">
-      <div class="wrapper">
-				<div class="footer_btm_con">
-					<div class="footer_logo">
-						<a href="<php //echo get_home_url(); ?>index.php">Jeval</a>
-					</div>
-					<div class="footer_nav">
-						<ul>
-							<li><a href="#about">About</a></li>
-							<li><a href="#careers">Career</a></li>
-							<li><a href="#projects">Projects</a></li>
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-    </div>
-	</footer>
-
-	<span class="back_top"></span>
-
-  </div> <!-- End Clearfix -->
-  </div> <!-- End Protect Me -->
-
-  <!--?php get_includes('ie');?-->
-
-  <!--
-  Solved HTML5 & CSS IE Issues
-  -->
-  <script src="js/modernizr-custom-v2.7.1.min.js"></script>
-  <script src="js/jquery-2.1.1.min.js"></script>
-
-  <!--
-  Solved Psuedo Elements IE Issues
-  -->
-  <script src="js/calcheight.min.js"></script>
-	<!-- <script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/jquery.skitter.min.js"></script>
-	<script src="js/css3-animate-it.min.js"></script> -->
-  <script src="js/responsiveslides.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <!--?php wp_footer(); ?-->
-</body>
-</html>
-<!-- End Footer -->
+<!--[if lt IE 10]> 
+<html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8 lt-ie7">
+  <![endif]-->
+  <!--[if IE 10]> 
+  <html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8">
+    <![endif]-->
+    <!--[if IE 11]> 
+    <html class="no-js lt-ie11">
+      <![endif]-->
+      <!--[if gt IE 11]><!--> 
+      <html class="no-js" lang="en-US">
+        <!--<![endif]-->
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <!--[if IE]>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+          <![endif]-->
+          <title>Jeval Tamidles</title>
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="css/hamburgers.min.css">
+          <link rel="stylesheet" href="css/media.css">
+          <link rel="stylesheet" href="css/rslides.min.css">
+          <link rel="stylesheet" href="css/font-awesome.min.css">
+          <!-- <link rel="stylesheet" href="css/animate.min.css">-->
+          <!-- <link rel="stylesheet" href="css/skitter.styles.min.css"> -->
+          <!--?php wp_head(); ?-->
+        </head>
+        <body>
+          <div class="protect-me">
+            <div class="clearfix">
+              <!-- Header -->
+              <header>
+                <div class="wrapper">
+                  <div class="header_con">
+                    <div class="main_logo">
+                      <a href="<?php //echo get_home_url(); ?>">Jeval</a>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </header>
+              <!-- End Header -->
+              <!-- Navigation -->
+              <div id="nav_area">
+                <div class="nav_toggle_button">
+                  <div class="logo_wrap"></div>
+                  <div class="toggle_holder">
+                    <div class="hamburger hamburger--spin-r">
+                      <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                      </div>
+                    </div>
+                    <small>Menu</small>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="toggle_right_nav">
+                  <nav class="page_nav">
+                    <div class="menu_slide_right">
+                      <a href="<?php //echo get_home_url(); ?>" class="logo_slide_right">Jeval</a>
+                      <div class="toggle_holder">
+                        <div class="hamburger hamburger--spin-r">
+                          <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                          </div>
+                        </div>
+                        <small>Close</small>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="wrapper">
+                      <!--?php wp_nav_menu( array( 'container_class' => 'nav-menu', 'theme_location' => 'primary', 'after' => '<span><i class="fa fa-2x">&nbsp;&nbsp;&nbsp;&nbsp;</i></span>') ); ?-->
+                      <ul>
+                        <!-- <li class="current_page_item"><a href="">Home</a></li> -->
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#careers">Career</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Project</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                  <div class="toggle_nav_close"></div>
+                </div>
+              </div>
+              <!-- End Navigation -->
+              <!-- Banner -->
+              <div id="about"></div>
+              <div id="banner">
+                <div class="wrapper">
+                  <div class="bnr_con">
+                    <!-- <--?php if (is_front_page() ) { ?> -->
+                    <figure><img src="images/jeval.jpg" alt="Jeval"/></figure>
+                    <div class="mobi_ban">
+                      <figure><img src="images/jeval.jpg" alt="Jeval"></figure>
+                    </div>
+                    <div class="bnr_info">
+                      <!--?php dynamic_sidebar('bnr_info');?-->
+                      <h2>Hi! I'm Jeval</h2>
+                      <h3>
+                      <span>Front End Developer</span></h2>
+                      <p>
+                        I am a qualified and professional web developer with a total of 5 years working experience in designing, developing, and configuring websites to meet business process and application requirements. With Strong creative and analytical skills. Team player with an eye for detail.
+                      </p>
+                      <ul>
+                        <li><a href="#popup__about">Click More</a></li>
+                        <li><a href="pdf/Jeval_Tamidles-CV.pdf" target="_blank" download>Download CV &#10515;</a></li>
+                      </ul>
+                    </div>
+                    <div id="popup__about" class="overlay">
+                      <div class="popup">
+                        <div class="popup__about-jeval-img">
+                          <figure><img src="images/jeval.jpg" alt="Jeval"></figure>
+                        </div>
+                        <div class="popup__about-jeval-txt">
+                          <h2>Hi! I'm Jeval</h2>
+                          <p>I'm a Front End Developer from the queen city of the south philippines.</p>
+                        </div>
+                        <a class="close" href="#close">&times;</a>
+                      </div>
+                    </div>
+                    <!-- <--?php } else { ?>
+                      <div class="non_ban">
+                      <div class="non_ban_img">
+                      <php if(is_home() && is_author() && is_category() && is_tag() && is_single()) { ?>
+                      <php if (has_post_thumbnail() ) {?>
+                      		<php the_post_thumbnail('full');?>
+                      <php }else{ ?>
+                      		<figure><img src="<php bloginfo('template_url');?>/images/slider/nh-banner.jpg" alt="image" /></figure>
+                      <php } ?>
+                      <php } elseif (has_post_thumbnail() ) { ?>
+                      			<php the_post_thumbnail('full');?>
+                      <php } else { ?>
+                      	<img src="<php bloginfo('template_url'); ?>/images/slider/nh-banner.jpg" alt="image">
+                      <php } ?>
+                      </div>
+                      
+                      <div class="page_title">
+                      <php if(!is_home() && !is_author() && !is_category() && !is_tag() && !is_single()) { ?>
+                      	<h1 class="h1_title"><php the_title(); ?></h1>
+                      	<php echo do_shortcode("[short_title id='" . get_the_ID() . "']"); ?>
+                      <php } else { ?>
+                      	<h1 class="h1_title">Blog</h1>
+                      <php } ?>
+                      </div>
+                      </div>
+                      <php }?> -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Banner -->
+              <!-- Middle -->
+              <div id="careers"></div>
+              <div id="middle">
+                <div class="wrapper">
+                  <div class="middle_con">
+                    <div class="mid_area">
+                      <!--?php dynamic_sidebar('header_info');?-->
+                      <h2>WORK EXPERIENCE <span>Who I Work With</span></h2>
+                      <p>
+                        Organizations that I've worked with for the past few years.
+                      </p>
+                    </div>
+                    <div class="midboxes">
+                      <div class="mid_box1">
+                        <!--?php dynamic_sidebar('bnr_info');?-->
+                        <!-- <figure><img src="images/proweaver.png" alt="proweaver"/></figure> -->
+                        <time>February 2021 - Present</time>
+                        <h2>Datawords</h2>
+                        <p><span>Senior Digital Specialist</span> Localized pages into different locale languages according to their own market, applied some customization requests, maintained pages.</p>
+                        <a href="#popup__dtw">View more</a>
+                      </div>
+                      <div id="popup__dtw" class="overlay">
+                        <div class="popup">
+                          <h2>Senior Digital Specialist</h2>
+                          <p>Localized pages into different locale languages according to their own market, applied some customization requests, maintained pages.</p>
+                          <ul>
+                            <li>Landing Pages</li>
+                            <li>Product Display Pages</li>
+                            <li>Content Slots</li>
+                            <li>E-store</li>
+                            <li>Page Designer Updates</li>
+                          </ul>
+                          <a class="close" href="#close">&times;</a>
+                        </div>
+                      </div>
+                      <div class="mid_box2">
+                        <!--?php dynamic_sidebar('bnr_info');?-->
+                        <!-- <figure><img src="images/dtw-logo.png" alt="Datawords"/></figure>
+                          <figure><img src="images/clarins.png" alt="Clarins"/></figure> -->
+                        <time>May 2019 - February 2021</time>
+                        <h2>Proweaver</h2>
+                        <p><span>Front End Developer</span> Converted pages from Web Design to HTML and CSS and incorporated the custom layout to Worpdress, created custom newsletter and maintained pages.</p>
+                        <a href="#popup__proweaver">View more</a>
+                      </div>
+                      <div id="popup__proweaver" class="overlay">
+                        <div class="popup">
+                          <h2>Front End Developer</h2>
+                          <p>Converted pages from Web Design to HTML and CSS and incorporated the custom layout to Worpdress, created custom newsletter and maintained pages.</p>
+                          <ul>
+                            <li>Custom Web Design/Pages</li>
+                            <li>Newsletter</li>
+                            <li>Blogs</li>
+                            <li>Page Maintenance</li>
+                          </ul>
+                          <a class="close" href="#close">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Middle -->
+              <!-- Main -->
+              <div id="skills"></div>
+              <div id="main_area">
+                <div class="wrapper">
+                  <div class="main_con">
+                    <img data-color="raspberry" data-inviewport="" class="lip-oil__bubble" src="images/bg-eclipse-purple.png" alt="Light" />
+                    <main>
+                      <!-- <php if(!is_front_page()) : ?>
+                        <div class="breadcrumbs">
+                        	<php
+                        		if(function_exists('bcn_display'))
+                        		{
+                        				bcn_display();
+                        		}?>
+                        </div>
+                        <php endif; ?> -->
+                      <h1 class="h1_title">Skills & Experience</h1>
+                      <p>
+                        Gained experience and successfully shipped solutions using the following technologies.
+                      </p>
+                      <a href="#popup__skills">Click More</a>
+                    </main>
+                    <div id="popup__skills" class="overlay">
+                      <div class="popup">
+                        <h2>Skills & Experience</h2>
+                        <div class="sideboxes">
+                          <div class="side_box1">
+                            <figure><img src="images/html.png" alt="HTML"/></figure>
+                          </div>
+                          <div class="side_box2">
+                            <figure><img src="images/css-3.png" alt="CSS 3"/></figure>
+                          </div>
+                          <div class="side_box3">
+                            <figure><img src="images/wordpress.png" alt="Wordpress"/></figure>
+                          </div>
+                          <div class="side_box4">
+                            <figure><img src="images/php.png" alt="PHP"/></figure>
+                          </div>
+                          <div class="side_box5">
+                            <figure><img src="images/salesforce.png" alt="SFCC"/></figure>
+                          </div>
+                          <div class="side_box6">
+                            <figure><img src="images/java-script.png" alt="Javscript"/></figure>
+                          </div>
+                          <div class="side_box7">
+                            <figure><img src="images/git.png" alt="Javscript"/></figure>
+                          </div>
+                          <div class="side_box8">
+                            <figure><img src="images/shopify.png" alt="Javscript"/></figure>
+                          </div>
+                          <div class="side_box9">
+                            <figure><img src="images/xd.png" alt="Javscript"/></figure>
+                          </div>
+                          <div class="side_box10">
+                            <figure><img src="images/photoshop.png" alt="Javscript"/></figure>
+                          </div>
+                          <div class="side_box11">
+                            <figure><img src="images/xara.png" alt="Javscript"/></figure>
+                          </div>
+                          <div class="side_box11">
+                            <figure><img src="images/mysql.png" alt="Javscript"/></figure>
+                          </div>
+                          <div class="side_box11">
+                            <figure><img src="images/xampp.png" alt="Javscript"/></figure>
+                          </div>
+                        </div>
+                        <a class="close" href="#close">&times;</a>
+                      </div>
+                    </div>
+                    <!--?php if ( is_front_page() ) { get_includes('sidebar'); } ?-->
+                    <aside class="sidebar">
+                      <div class="sideboxes">
+                        <div class="side_box1">
+                          <figure><img src="images/html.png" alt="HTML"/></figure>
+                        </div>
+                        <div class="side_box2">
+                          <figure><img src="images/css-3.png" alt="CSS 3"/></figure>
+                        </div>
+                        <div class="side_box3">
+                          <figure><img src="images/wordpress.png" alt="Wordpress"/></figure>
+                        </div>
+                        <div class="side_box4">
+                          <figure><img src="images/php.png" alt="PHP"/></figure>
+                        </div>
+                        <div class="side_box5">
+                          <figure><img src="images/salesforce.png" alt="SFCC"/></figure>
+                        </div>
+                        <div class="side_box6">
+                          <figure><img src="images/java-script.png" alt="Javscript"/></figure>
+                        </div>
+                      </div>
+                    </aside>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <!-- End Main -->
+              <!--?php if ( is_front_page() ) { get_includes('bottom'); } ?-->
+              <!-- Bottom -->
+              <div id="projects"></div>
+              <div id="bottom1">
+                <div class="wrapper">
+                  <div class="btm1_con">
+                    <div class="btm1_area">
+                      <!--?php dynamic_sidebar('header_info');?-->
+                      <h2>Testimonials <span>Read What Others Have To Say</span></h2>
+                    </div>
+                    <div class="btm1boxes">
+                      <div class="btm1_box1">
+                        <figure><img src="images/anj.jpeg" alt="Nina Anjerrie Baraquil"/></figure>
+                        <h2>Nina Anjerrie Baraquil <span>Web Project Manager</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                      <div class="btm1_box2">
+                        <figure><img src="images/jad.jpg" alt="Jan Francis Jadloc"/></figure>
+                        <h2>Jan Francis Jadloc <span>Customizations Junior Team Lead</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                      <div class="btm1_box3">
+                        <figure><img src="images/melo.jpg" alt="Melody Abigail Cuenco"/></figure>
+                        <h2>Melody Abigail Cuenco <span>Project Manager</span></h2>
+                        <p>Jeval is a detail-oriented individual who possesses a strong understanding of project processes, ensuring her team is equally well-informed. She willingly supports her colleagues and steps into leadership roles as needed. Moreover, she promptly communicates any issues, fostering swift resolutions. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="contact"></div>
+              <div id="bottom2">
+                <div class="wrapper">
+                  <div class="btm2_con">
+                    <img data-color="blue" data-inviewport="" class="lip-oil__bubble" src="images/bg-eclipse-blue.png" alt="Light" />
+                    <div class="btm2_area">
+                      <!--?php dynamic_sidebar('header_info');?-->
+                      <h2>Get in touch <span>Contact Details</span></h2>
+                      <p>Let's grab a cup of coffee. Feel free to reach out for any project related inquiries and I'll followup as soon as possible.</p>
+                    </div>
+                    <div class="btm2boxes">
+                      <div class="btm2_box1">
+                        <mark>+639957596081</mark>
+                        <p>Phone number</p>
+                      </div>
+                      <div class="btm2_box2">
+                        <a href="mailto:jevaltamidles@gmail.com">jevaltamidles@gmail.com</a>
+                        <p>Email</p>
+                      </div>
+                      <div class="btm2_box3">
+                        <h3>Cebu City, Cebu - Philippines</h3>
+                        <p>Address</p>
+                      </div>
+                    </div>
+                    <div class="btm3_area">
+                      <h2>Socials</h2>
+                    </div>
+                    <ul class="btm3boxes">
+                      <li><a href="https://www.linkedin.com/in/jeval-tamidles/" target="_blank">LinkedIn</a></li>
+                      <li><a href="https://github.com/jevaltamidles" target="_blank">Github</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End Bottom -->
+              <!--Footer -->
+              <footer>
+                <div class="footer_btm">
+                  <div class="wrapper">
+                    <div class="footer_btm_con">
+                      <div class="footer_logo">
+                        <a href="<php //echo get_home_url(); ?>index.php">Jeval</a>
+                      </div>
+                      <div class="footer_nav">
+                        <ul>
+                          <li><a href="#about">About</a></li>
+                          <li><a href="#careers">Career</a></li>
+                          <li><a href="#skills">Skills</a></li>
+                          <li><a href="#projects">Projects</a></li>
+                          <li><a href="#contact">Contact</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+              <span class="back_top"></span>
+            </div>
+            <!-- End Clearfix -->
+          </div>
+          <!-- End Protect Me -->
+          <!--?php get_includes('ie');?-->
+          <!--
+            Solved HTML5 & CSS IE Issues
+            -->
+          <script src="js/modernizr-custom-v2.7.1.min.js"></script>
+          <script src="js/jquery-2.1.1.min.js"></script>
+          <!--
+            Solved Psuedo Elements IE Issues
+            -->
+          <script src="js/calcheight.min.js"></script>
+          <!-- <script src="js/jquery.easing.1.3.js"></script>
+            <script src="js/jquery.skitter.min.js"></script>
+            <script src="js/css3-animate-it.min.js"></script> -->
+          <script src="js/responsiveslides.min.js"></script>
+          <script src="js/wow.min.js"></script>
+          <script src="js/plugins.js"></script>
+          <!--?php wp_footer(); ?-->
+          <script type="text/javascript">
+            window.scrollTo(0, 0);
+            animateOnScroll = {
+            lastScroll: 0,
+            pauseScroll: false,
+            header: document.querySelector("body"),
+            main: document.querySelector(".main_con"),
+            listAnimatedElements: document.querySelectorAll("*[data-inviewport]"),
+            anim: false,
+            flagAnim: false,
+            stopAnim: function () {
+             this.pauseScroll = true;
+             this.main.dataset.noanim = "1";
+             setTimeout(function () {
+               animateOnScroll.main.dataset.noanim = "0";
+               animateOnScroll.pauseScroll = false;
+             }, 3000);
+            },
+            init: function () {
+             window.onscroll = function () {
+               animateOnScroll.scrollEvent();
+               dp_Sticky.scrollUpdate();
+             };
+             this.scrollEvent();
+            },
+            scrollEvent() {
+             var scrollVal =
+               document.documentElement.scrollTop || document.body.scrollTop;
+             this.main.dataset.noanim = this.lastScroll > scrollVal ? 1 : 0;
+             if (this.pauseScroll) this.main.dataset.noanim = 1;
+             this.lastScroll = scrollVal;
+             if (this.flagAnim) return false;
+             this.flagAnim = true;
+             this.checkElements();
+             this.main.dataset.scrolling = 1;
+             setTimeout(function () {
+               animateOnScroll.main.dataset.scrolling = 0;
+               animateOnScroll.flagAnim = false;
+             }, 10);
+            },
+            checkElements() {
+             var scrollVal =
+               document.documentElement.scrollTop || document.body.scrollTop;
+             this.lastScroll = scrollVal;
+             var _this = this;
+             /*--animated--*/
+             this.listAnimatedElements.forEach(function (obj, index) {
+               var top = _this.getTop(obj);
+               var delta = top - (1 * scrollVal + 1 * _this.header.offsetHeight);
+               var test_1 = delta < window.innerHeight * 0.5;
+               var test_2 = delta + obj.offsetHeight < 0;
+               var test_2_last =
+                 delta + obj.offsetHeight <
+                 window.innerHeight - _this.header.offsetHeight;
+               /*-----------------------------------------------*/
+               var inViewport = 0;
+               if (test_1) inViewport = 1;
+               if (obj.dataset.last == 1 && test_2_last) inViewport = 2;
+               if (obj.dataset.last != 1 && test_2) inViewport = 2;
+               if (window.innerWidth < 1023 && window.innerWidth > 761) inViewport = 1;
+               obj.setAttribute("data-inviewport", inViewport);
+               /*-------------------------------------------------*/
+             });
+            },
+            getTop: function (el) {
+             const rect = el.getBoundingClientRect();
+             return rect.top + window.scrollY;
+            },
+            getLeft: function (el) {
+             const rect = el.getBoundingClientRect();
+             return rect.left + window.scrollX;
+            },
+            };
+            animateOnScroll.init();
+          </script>
+        </body>
+      </html>
+      <!-- End Footer -->
