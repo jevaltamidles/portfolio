@@ -151,15 +151,15 @@ header{background: #00002B;position: relative;z-index: 3;}
 .nav_toggle_button .toggle_holder{position: absolute;top: 60%;right: 0;transform: translateY(-50%);}
 .nav_toggle_button .hamburger{}
 .nav_toggle_button .hamburger-inner, .nav_toggle_button .hamburger-inner:before, .nav_toggle_button .hamburger-inner:after{background:#fff;}
-.nav_toggle_button small{text-transform:uppercase;font-weight:bold;font-size:15px;color:#fff;display:block;}
+.nav_toggle_button small{text-transform:uppercase;font-weight:bold;font-size:15px;color:#fff;display:none;}
 
 /* Default Responsive Style for Toggle Swipe Right */
 .menu_slide_right {display: none;}
 
 /*Responsive burger and color*/
 .menu_slide_right .hamburger-inner, .menu_slide_right .hamburger-inner:before, .menu_slide_right .hamburger-inner:after{background:#fff;}
-.menu_slide_right .toggle_holder{position: absolute;top: 55%;right: 10px;transform: translateY(-50%);}
-.menu_slide_right small{text-transform:uppercase;color:#ffff;font-weight:bold;font-size:11px;display:block;text-align: center;}
+.menu_slide_right .toggle_holder{position: absolute;top: 55%;right: 0;transform: translateY(-50%);}
+.menu_slide_right small{text-transform:uppercase;color:#ffff;font-weight:bold;font-size:11px;display:none;text-align: center;}
 
 /*end nav*/
 
@@ -630,7 +630,7 @@ footer{background: #00002B;}
   border-radius: 7px !important;
 }
 .popup__about-jeval-txt {
-	margin: 40px 30px 40px 38%;
+	margin: 40px 17px 40px 40%;
 }
 #popup__about {
 }
@@ -639,7 +639,7 @@ footer{background: #00002B;}
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 400px;
+  min-width: 400px;
   border-radius: 7px;
   background: rgba(183,197,255,0.7);
   max-width: 630px;
@@ -649,11 +649,12 @@ footer{background: #00002B;}
   text-align: left;
   font-size: 48px;
   color: #fff;
-  margin-bottom: 7px;
+  margin-bottom: 19px;
   font-family: "Outfit", sans-serif;
   font-weight: bold;
 }
-.popup__about-jeval-txt p{font-size: 18px;color: #fff;font-family: "Outfit", sans-serif;line-height: 1.5em;}
+.popup__about-jeval-txt p{font-size: 18px;color: #fff;font-family: "Outfit", sans-serif;line-height: 1.2em;margin-bottom: 10px;}
+.popup__about-jeval-txt p:last-of-type{margin-bottom: 0;}
 .popup__about-jeval-img figure {
   position: relative;
   height: 100%;

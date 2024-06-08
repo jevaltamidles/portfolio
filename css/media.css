@@ -249,20 +249,27 @@ and (max-width : 600px) {
 @media only screen
 and (max-width : 500px) {
   .bnr_con figure{max-width: 349px;}
-  .bnr_info h2{font-size: 56px;}
+  .bnr_info h2{font-size: 50px;}
+  .bnr_info h3{font-size: 37px;}
   .bnr_info h2 span{font-size: 36px;}
   .bnr_info ul{flex-wrap: wrap;}
   .bnr_info ul li{margin: 0 auto 15px;max-width: 100%;}
   .bnr_info ul li a{max-width: 195px;width: 100%;line-height: 45px;font-size: 0.8em;}
-  .popup__about-jeval-txt{margin: 40px 21px 40px 38%;}
+  .mid_area{padding: 0 25px;}
+  .popup .popup__about-jeval-txt h2{font-size: 35px;}
+  .popup .popup__about-jeval-txt p{font-size: 15px;}
+  .popup__about-jeval-txt{margin: 40px 15px 40px 40%;}
   [class^="side_box"]{max-width: 65px;height: 65px;}
   [class^="side_box"] figure{max-width: 40px;}
   #popup__skills [class^="side_box"]{height: 75px;max-width: 75px;}
   #popup__skills [class^="side_box"] figure{max-width: 43px;}
-  main .h1_title{font-size: 62px;}
+  main .h1_title{font-size: 60px;}
   main a{max-width: 175px;width: 100%;line-height: 45px;font-size: 18px;}
   [class^="btm1_box"]{max-width: 100%;margin: 0 auto 70px;}
   [class^="btm1_box"] h2{min-height: auto;}
-  
+  .btm3boxes li a::before{width: 25px;height: 25px;}
+  .btm3boxes li:last-of-type a::before{width: 25px;height: 25px;}
+  .btm3boxes li a{font-size: 20px;}
+  .footer_nav ul li a{font-size: 16px;}
 }
 
